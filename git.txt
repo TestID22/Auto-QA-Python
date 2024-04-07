@@ -1,0 +1,6 @@
+git status - to check changes
+git add 
+git commit -m "name of commit"
+git push
+
+branges 
