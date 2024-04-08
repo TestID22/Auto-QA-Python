@@ -4,3 +4,4 @@ git commit -m "name of commit"
 git push
 
 branges 
+git push origin main  - to get all updates
