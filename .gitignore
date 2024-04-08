@@ -1,6 +1,8 @@
 *.tmp
 *.log
 Properties/
+D:/Automation/1.TestFrameWork/.idea
+ .idea/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
@@ -13,7 +15,7 @@ __pycache__/
 
 # C extensions
 *.so
- .idea/
+
 
 # Distribution / packaging
 .Python
