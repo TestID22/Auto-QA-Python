@@ -10,3 +10,8 @@ Workflow
 6. import webdriverWait to BasePage
 	from selenium.webdriver.support.ui import WebDriverWait
 	from selenium.webdriver.support import expected_conditions
+7. Created config folder with Links Class
+8. Created first Base page open, isopened and 
+9. Login page object page was inherited from Base page
+	LOGIN_FIELD = ("xpath", "//input[@name='username']")
+    PASSWORD_FIELD = ("xpath", "//input[@name='password']")
