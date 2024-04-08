@@ -1,7 +1,7 @@
 *.tmp
 *.log
 Properties/
-D:/Automation/1.TestFrameWork/.idea
+1.TestFrameWork/.idea
  .idea/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
