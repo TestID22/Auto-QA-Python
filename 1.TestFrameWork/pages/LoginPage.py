@@ -14,7 +14,7 @@ class LoginPage(BasePage):
     def enter_login(self, login):
         self.wait.until(EC.element_to_be_clickable(self.USERNAME_FIELD)).send_keys(login)
 
-    def enter_passwor(self, password):
+    def enter_password(self, password):
         self.wait.until(EC.element_to_be_clickable(self.PASSWORD_FIELD)).send_keys(password)
 
     def click_submit(self):
