@@ -14,3 +14,5 @@ class Test_InfoPage(BaseTest):
         self.personal_page.change_name(f"Vitalii was here {random.randint(1, 100)}")
         self.personal_page.save_changes()
         self.personal_page.is_changes_saved()
+
+
