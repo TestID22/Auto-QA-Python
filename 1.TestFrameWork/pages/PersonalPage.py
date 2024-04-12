@@ -1,6 +1,6 @@
-import time
 
 import allure
+from selenium.webdriver import Keys
 
 from config.links import Links
 from pages.BasePage import BasePage
@@ -19,7 +19,10 @@ class PesrsonalPage(BasePage):
     def change_name(self, new_name):
         with allure.step(f"Change name {new_name}"):
             first_name_field = self.wait.until(EC.element_to_be_clickable(self.FIRST_NAME_FIELD))
-            first_name_field.clear() #todo: fix that the fiels is not cleared
+            #first_name_field.clear() #todo: fix that the fiels is not cleared
+            self.driver.find_element(*self.FIRST_NAME_FIELD).clear()
+            first_name_field.send_keys(Keys.CONTROL + "A")
+            first_name_field.send_keys(Keys.BACKSPACE)
             first_name_field.send_keys(new_name)
             self.name = new_name
 

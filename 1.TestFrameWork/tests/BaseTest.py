@@ -6,7 +6,6 @@ from pages.PersonalPage import PesrsonalPage
 from config.Data import Data
 
 class BaseTest:
-    #todo: add allure
     login_page: LoginPage
     dashboard_page: DashboardPage
     personal_page: PesrsonalPage
