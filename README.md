@@ -1,4 +1,6 @@
 "# Auto-QA-Python" 
+1. 1.TestFrameWork - (https://opensource-demo.orangehrmlive.com/)
+2. (https://demoqa.com/)
 Workflow
 1. Create Project (activate venv) .\venv\scripts\activate
 2. Import libraries - pip install pytest selenium webdriver_manager
