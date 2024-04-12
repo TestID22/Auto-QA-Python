@@ -1,9 +1,14 @@
 import random
+import allure
+import pytest
 
 from BaseTest import BaseTest
+@allure.feature("My infor tests")
 class Test_InfoPage(BaseTest):
 
-
+    @allure.title("Change profile name")
+    @allure.severity("Critical")
+    @pytest.mark.smoke
     def test_logining(self):
         self.login_page.open()
         self.login_page.enter_login(self.data.LOGIN)

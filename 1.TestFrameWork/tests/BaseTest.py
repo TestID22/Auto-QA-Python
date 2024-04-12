@@ -18,3 +18,6 @@ class BaseTest:
         request.cls.dashboard_page = DashboardPage(driver)
         request.cls.personal_page = PesrsonalPage(driver)
         request.cls.data = Data()
+
+
+
