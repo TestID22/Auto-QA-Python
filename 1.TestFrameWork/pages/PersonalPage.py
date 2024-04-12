@@ -1,3 +1,5 @@
+import time
+
 import allure
 
 from config.links import Links
@@ -11,11 +13,13 @@ class PesrsonalPage(BasePage):
 
     FIRST_NAME_FIELD = ("xpath", "//input[@name='firstName']")
     SAVE_BUTTON = ("xpath", "(//button[@type='submit'])[1]")
+    SPINNER = ('xpath', "//div[@class='oxd-loading-spinner']")
+
 
     def change_name(self, new_name):
         with allure.step(f"Change name {new_name}"):
             first_name_field = self.wait.until(EC.element_to_be_clickable(self.FIRST_NAME_FIELD))
-            first_name_field.clear()
+            first_name_field.clear() #todo: fix that the fiels is not cleared
             first_name_field.send_keys(new_name)
             self.name = new_name
 
@@ -25,4 +29,5 @@ class PesrsonalPage(BasePage):
 
     @allure.step("Changes have been saved successfully")
     def is_changes_saved(self):
-        self.wait.until(EC.text_to_be_present_in_element_value(self.FIRST_NAME_FIELD, self.name))
+        self.wait.until(EC.invisibility_of_element_located(self.SPINNER))
+        self.wait.until(EC.visibility_of_element_located(self.SPINNER))

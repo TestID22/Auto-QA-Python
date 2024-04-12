@@ -5,7 +5,7 @@ import pytest
 from BaseTest import BaseTest
 @allure.feature("My infor tests")
 class Test_InfoPage(BaseTest):
-
+    #todo: fix the duplicate name
     @allure.title("Change profile name")
     @allure.severity("Critical")
     @pytest.mark.smoke
@@ -16,7 +16,7 @@ class Test_InfoPage(BaseTest):
         self.login_page.click_submit()
         self.dashboard_page.is_opened()
         self.dashboard_page.click_my_info_link()
-        self.personal_page.change_name(f"Vitalii was here {random.randint(1, 100)}")
+        self.personal_page.change_name("Vitalii test")
         self.personal_page.save_changes()
         self.personal_page.is_changes_saved()
 
